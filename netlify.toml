@@ -1,0 +1,46 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/register"
+  to = "/.netlify/functions/register"
+  status = 200
+
+[[redirects]]
+  from = "/api/heartbeat"
+  to = "/.netlify/functions/heartbeat"
+  status = 200
+
+[[redirects]]
+  from = "/api/request"
+  to = "/.netlify/functions/create-request"
+  status = 200
+
+[[redirects]]
+  from = "/api/inbox"
+  to = "/.netlify/functions/inbox"
+  status = 200
+
+[[redirects]]
+  from = "/api/respond"
+  to = "/.netlify/functions/respond"
+  status = 200
+
+[[redirects]]
+  from = "/api/status"
+  to = "/.netlify/functions/status"
+  status = 200
+
+[[redirects]]
+  from = "/api/location"
+  to = "/.netlify/functions/location"
+  status = 200
+
+[[redirects]]
+  from = "/api/stop"
+  to = "/.netlify/functions/stop"
+  status = 200
